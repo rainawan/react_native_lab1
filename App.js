@@ -25,9 +25,14 @@ export default function App() {
     })
   ).current;
 
+
+
   return (
-    // <ScrollView>
-    <ScrollView style={styles.container}>
+    <ScrollView 
+      alwaysBounceHorizontal={true}
+      alwaysBounceVertical={true}
+      bounces={true}
+      style={styles.container}>
       {/* <Text>bounce{props.bounce}</Text> */} 
         <View style={styles.photoContainer}>
           <Image source={require("./images/pumpkin.jpg")} style={styles.photo} />
@@ -36,7 +41,7 @@ export default function App() {
           <Text style={styles.nameAndPronouns}>RAINA WAN</Text>
         </View>
         <View style={styles.blurbContainer}>
-          <Text style={styles.blurb}>pumpkin</Text>
+          <Text style={styles.blurb}>peumpkin</Text>
         </View>
 
         <View style = {styles.wholeBox}>
@@ -52,8 +57,8 @@ export default function App() {
           </Animated.View>
         </View>
 
-        <TouchableOpacity onPress={() => alert('jk')} style={styles.button}>
-          <Text style={styles.buttonText}>click me i dont work</Text>
+        <TouchableOpacity onPress={() => alert('how dare you')} style={styles.button}>
+          <Text style={styles.buttonText}>don't click me</Text>
         </TouchableOpacity>
 
       <SafeAreaView style={styles.scroll}>
