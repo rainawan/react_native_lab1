@@ -51,20 +51,23 @@ export default function App() {
     <SafeAreaView style={styles.scroll}>
       <ScrollView style={styles.scrollView}>
         <Text style={styles.scrollText}>
-          scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll 
-          scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll 
-          scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll 
-          scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll 
-          scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll 
-          scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll 
-          scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll 
-          scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll 
-          scroll scroll scroll scroll scroll scroll scroll scroll scroll scroll 
+          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
         </Text>
       </ScrollView>
+      <ScrollView style={styles.scrollView}>
+      <Text style={styles.scrollText}>
+        words words words words words
+      </Text>
+      </ScrollView>
     </SafeAreaView>
-
-
 
     </View>
   );
@@ -149,14 +152,18 @@ const styles = StyleSheet.create({
   //sectioned scroll
   scroll: {
     flex: 2,
+    flexDirection: 'row',
+    position: 'relative',
     paddingBottom: 30,
     paddingTop: StatusBar.currentHeight,
-    marginHorizontal: 220,
-    marginLeft: 550,
-    marginRight: 30,
+    marginHorizontal: 270,
+    // marginLeft: 550,
+    // marginRight: 30,
   },
   scrollView: {
+    flex: 1,
+    padding: 30,
     backgroundColor: 'pink',
-    marginHorizontal: 90,
+    marginHorizontal: 10,
   },
 });
