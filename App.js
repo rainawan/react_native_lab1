@@ -28,7 +28,7 @@ export default function App() {
   return (
     // <ScrollView>
     <ScrollView style={styles.container}>
-      
+      {/* <Text>bounce{props.bounce}</Text> */} 
         <View style={styles.photoContainer}>
           <Image source={require("./images/pumpkin.jpg")} style={styles.photo} />
         </View>
@@ -36,7 +36,7 @@ export default function App() {
           <Text style={styles.nameAndPronouns}>RAINA WAN</Text>
         </View>
         <View style={styles.blurbContainer}>
-          <Text style={styles.blurb}>raina the pumpkin</Text>
+          <Text style={styles.blurb}>pumpkin</Text>
         </View>
 
         <View style = {styles.wholeBox}>
@@ -84,6 +84,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 30,
     backgroundColor: "#F5EDDC",
   },
   photoContainer: {
@@ -153,7 +154,6 @@ const styles = StyleSheet.create({
     padding: 20,
     borderRadius: 5,
     margin: 30,
-    marginHorizontal: 150,
   },
   buttonText: {
     textAlign: "center",
@@ -170,9 +170,6 @@ const styles = StyleSheet.create({
     position: 'relative',
     paddingBottom: 30,
     paddingTop: StatusBar.currentHeight,
-    // marginHorizontal: 270,
-    // marginLeft: 550,
-    // marginRight: 30,
   },
   scrollView: {
     flex: 1,
