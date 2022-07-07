@@ -1,38 +1,15 @@
 import React, { useRef } from "react";
 import { Text, View, StyleSheet, Image, Animated, PanResponder, 
   TouchableOpacity, SafeAreaView, ScrollView, StatusBar, FlatList } from "react-native";
-import pumpkin from './images/pumpkin.jpg'
+import pumpkin from './images/pumpkin.jpg';
 
-// const DATA = [
-//   {
-//     id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-//     title: "First Itemhdjhfadfjlkadflkadjflkjdfldksjflkasjdflkasdjflakdjfajsklfjalsdfkjslfkjsadlfjsdfjlasjkdflakdjfla;skdjfa",
-//   },
-//   {
-//     id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-//     title: "Second Item",
-//   },
-//   {
-//     id: "58694a0f-3da1-471f-bd96-145571e29d72",
-//     title: "Third Item",
-//   },
-// ];
-
-// const Item = ({ item, onPress, backgroundColor, textColor }) => (
-//   <TouchableOpacity onPress={onPress} style={[styles.item, backgroundColor]}>
-//     <Text style={[styles.title, textColor]}>{item.title}</Text>
-//   </TouchableOpacity>
-// );
+const logo = {
+  uri: 'https://reactnative.dev/img/tiny_logo.png',
+  width: 64,
+  height: 64
+};
 
 export default function App() {
-
-  // const [selectedId, setSelectedId] = useState(null);
-
-  // const renderItem = ({ item }) => {
-  //   const backgroundColor = item.id === selectedId ? "#6e3b6e" : "#f9c2ff";
-  //   const color = item.id === selectedId ? 'white' : 'black';
-
-
 
   const pan = useRef(new Animated.ValueXY()).current;
   const panResponder = useRef(
@@ -49,66 +26,59 @@ export default function App() {
   ).current;
 
   return (
-    <View style={styles.container}>
+    // <ScrollView>
+    <ScrollView style={styles.container}>
       
-      <View style={styles.photoContainer}>
-        <Image source={require("./images/pumpkin.jpg")} style={styles.photo} />
-      </View>
-      <View style={styles.nameContainer}>
-        <Text style={styles.nameAndPronouns}>RAINA WAN</Text>
-      </View>
-      <View style={styles.blurbContainer}>
-        <Text style={styles.blurb}>raina the pumpkin</Text>
-      </View>
+        <View style={styles.photoContainer}>
+          <Image source={require("./images/pumpkin.jpg")} style={styles.photo} />
+        </View>
+        <View style={styles.nameContainer}>
+          <Text style={styles.nameAndPronouns}>RAINA WAN</Text>
+        </View>
+        <View style={styles.blurbContainer}>
+          <Text style={styles.blurb}>raina the pumpkin</Text>
+        </View>
 
-      <View style = {styles.wholeBox}>
-        <Animated.View
-          style={{
-            transform: [{ translateX: pan.x }, { translateY: pan.y }]
-          }}
-          {...panResponder.panHandlers}
-        >
-          <View style={styles.box}>
-            <Text style={styles.boxText}>Drag me!</Text>
-          </View>
-        </Animated.View>
-      </View>
+        <View style = {styles.wholeBox}>
+          <Animated.View
+            style={{
+              transform: [{ translateX: pan.x }, { translateY: pan.y }]
+            }}
+            {...panResponder.panHandlers}
+          >
+            <View style={styles.box}>
+              <Text style={styles.boxText}>Drag me!</Text>
+            </View>
+          </Animated.View>
+        </View>
 
-      <TouchableOpacity onPress={() => alert('jk')} style={styles.button}>
-        <Text style={styles.buttonText}>click me i dont work</Text>
-      </TouchableOpacity>
+        <TouchableOpacity onPress={() => alert('jk')} style={styles.button}>
+          <Text style={styles.buttonText}>click me i dont work</Text>
+        </TouchableOpacity>
 
-    <SafeAreaView style={styles.scroll}>
-      <ScrollView style={styles.scrollView}>
+      <SafeAreaView style={styles.scroll}>
+        <ScrollView style={styles.scrollView}>
+          <Text style={styles.scrollText}>
+            scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+            scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+            scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+            scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+            scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+            scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+            scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+            scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+            scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+          </Text>
+        </ScrollView>
+        <ScrollView style={styles.scrollView}>
         <Text style={styles.scrollText}>
-          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
-          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
-          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
-          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
-          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
-          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
-          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
-          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
-          scroll me scroll me scroll me scroll me scroll me scroll me scroll me
+          words words words words words
         </Text>
-      </ScrollView>
-      <ScrollView style={styles.scrollView}>
-      <Text style={styles.scrollText}>
-        words words words words words
-      </Text>
-      </ScrollView>
-    </SafeAreaView>
+        </ScrollView>
+      </SafeAreaView>
 
-    {/* <Item
-        item={item}
-        onPress={() => setSelectedId(item.id)}
-        backgroundColor={{ backgroundColor }}
-        textColor={{ color }}
-      /> */}
-
-    </View>
+    </ScrollView>
   );
-  // };
 }
 
 const styles = StyleSheet.create({
